@@ -1,0 +1,9 @@
+project: savantenvs/croaring
+target: croaring_fuzzer_cc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/croaring_fuzzer_cc/testsuite
+cmds:
+  - cmd: /mayhem/croaring_fuzzer_cc
+    libfuzzer: true
+    timeout: 5
