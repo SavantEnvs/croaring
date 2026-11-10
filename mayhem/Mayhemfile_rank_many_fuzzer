@@ -1,0 +1,9 @@
+project: savantenvs/croaring
+target: rank_many_fuzzer-mined-d81c639
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rank_many_fuzzer-mined-d81c639/testsuite
+cmds:
+  - cmd: /mayhem/rank_many_fuzzer
+    libfuzzer: true
+    timeout: 5
